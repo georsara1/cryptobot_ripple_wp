@@ -1,0 +1,1 @@
+This folder will contain examples on how to execute the existing pair (XRP/EUR) or how to add new ones
