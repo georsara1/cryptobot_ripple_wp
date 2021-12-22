@@ -5,7 +5,10 @@ a class using the currency pair you decide and
 then call the 'auto_trade function. The only
 parameter needed is the price at which the coin
 was bought.
+
+The specific instance works for the XRP/EUR pair.
 '''
+
 from cryptobot_base_v2 import cryptobot
 
 eth_bot = cryptobot('XXRPZEUR')

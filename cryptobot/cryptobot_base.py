@@ -63,7 +63,7 @@ class cryptobot():
         can be found in the 'pair_dictionary.json' file or we can
         use the create_pair_metadata.py file to add new ones.
         '''
-        with open('pair_dictionary.json') as jsonFile:
+        with open('../resources/pair_dictionary.json') as jsonFile:
             jsonObject = json.load(jsonFile)
             jsonFile.close()
 
@@ -71,11 +71,11 @@ class cryptobot():
         self._coin = jsonObject[pair]['coin']
         self._currency = jsonObject[pair]['currency']
 
-        with open('api_keys/api_url.txt', "r") as txt_file:
+        with open('../resources/api_keys/api_url.txt', "r") as txt_file:
             self.__api_url = txt_file.readline()
-        with open('api_keys/api_key.txt', "r") as txt_file:
+        with open('../resources/api_keys/api_key.txt', "r") as txt_file:
             self.__api_key = txt_file.readline()
-        with open('api_keys/api_sec.txt', "r") as txt_file:
+        with open('../resources/api_keys/api_sec.txt', "r") as txt_file:
             self.__api_sec = txt_file.readline()
 
     def get_kraken_signature(self,urlpath, data, secret):
